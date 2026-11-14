@@ -36,15 +36,15 @@ Tech Stack
 - Hosting:	Vercel
 
 Project Structure
-	app.py
-	pyproject.toml
-	requirements.txt
-	hitorri/
-  	__init__.py
-  	config.py
-  	routes.py
-  	catalog/
-  	templates/
-	public/static/
-  	css/
-  	js/
+-app.py
+-pyproject.toml
+-requirements.txt
+-hitorri/
+--__init__.py
+--config.py
+--routes.py
+--catalog/
+--templates/
+-public/static/
+--css/
+--js/
