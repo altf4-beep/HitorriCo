@@ -1,0 +1,27 @@
+<div id="view-boutique" class="hidden space-y-4">
+  <div class="theme-card rounded-3xl p-5 border border-black/5 shadow-sm">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+      <div>
+        <h2 class="font-cozy text-lg font-bold flex items-center gap-2">
+          <i class="fa-solid fa-store text-[#D98A6C]"></i>
+          {{ brand.short }}'s Cozy Boutique
+        </h2>
+        <p class="text-xs opacity-70">Spend your hard-earned 💧 Dewdrops on hats, glasses, handheld props, and room decor!</p>
+      </div>
+      <div class="px-3.5 py-1.5 rounded-2xl bg-sky-500/15 text-sky-700 dark:text-sky-300 font-pixel text-xs font-bold">
+        💧 <span id="boutique-currency-display">80</span> Dewdrops
+      </div>
+    </div>
+
+    <div class="flex items-center gap-1.5 flex-wrap mb-4">
+      <button onclick="filterBoutique('all')" class="boutique-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#3D3834] text-white" data-bfilter="all">All Items</button>
+      <button onclick="filterBoutique('headwear')" class="boutique-pill px-3 py-1 rounded-full text-xs font-semibold bg-black/5" data-bfilter="headwear">🎩 Headwear</button>
+      <button onclick="filterBoutique('eyewear')" class="boutique-pill px-3 py-1 rounded-full text-xs font-semibold bg-black/5" data-bfilter="eyewear">👓 Eyewear & Face</button>
+      <button onclick="filterBoutique('prop')" class="boutique-pill px-3 py-1 rounded-full text-xs font-semibold bg-black/5" data-bfilter="prop">🎸 Neck & Props</button>
+      <button onclick="filterBoutique('decor')" class="boutique-pill px-3 py-1 rounded-full text-xs font-semibold bg-black/5" data-bfilter="decor">🪴 Room & Aura</button>
+    </div>
+
+    <div id="boutique-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    </div>
+  </div>
+</div>

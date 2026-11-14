@@ -1,0 +1,48 @@
+<div id="customize-modal" class="hidden fixed inset-0 z-50 bg-black/45 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+  <div class="theme-card w-full max-w-md rounded-[2.5rem] p-6 shadow-2xl border border-black/10 relative my-auto">
+    <button onclick="closeCustomizeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-sm">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <h3 class="font-cozy text-xl font-bold mb-1">Companion Wardrobe & Spirit</h3>
+    <p class="text-xs opacity-70 mb-4">Personalize your pocket friend and mix & match owned accessories.</p>
+
+    <div class="mb-4">
+      <label class="block text-xs font-semibold mb-1.5">Companion Name</label>
+      <input type="text" id="input-pet-name" maxlength="18" class="w-full px-4 py-2.5 rounded-2xl bg-black/5 border border-transparent focus:border-[#88A88E] focus:outline-none text-sm font-medium" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-xs font-semibold mb-1.5">Choose Companion Spirit</label>
+      <div class="grid grid-cols-3 gap-2.5">
+        <button type="button" onclick="selectSpecies('sprout')" class="species-option p-3 rounded-2xl border-2 border-transparent bg-black/5 hover:bg-[#88A88E]/15 flex flex-col items-center gap-1 transition-all" data-species="sprout">
+          <span class="text-2xl">🌱</span>
+          <span class="text-xs font-bold">Sprout Spirit</span>
+        </button>
+        <button type="button" onclick="selectSpecies('cloud')" class="species-option p-3 rounded-2xl border-2 border-transparent bg-black/5 hover:bg-[#A59AC9]/15 flex flex-col items-center gap-1 transition-all" data-species="cloud">
+          <span class="text-2xl">☁️</span>
+          <span class="text-xs font-bold">Cloud Cat</span>
+        </button>
+        <button type="button" onclick="selectSpecies('fox')" class="species-option p-3 rounded-2xl border-2 border-transparent bg-black/5 hover:bg-[#D98A6C]/15 flex flex-col items-center gap-1 transition-all" data-species="fox">
+          <span class="text-2xl">🦊</span>
+          <span class="text-xs font-bold">Pebble Fox</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <label class="block text-xs font-semibold mb-1.5">Owned Wearables (Tap to Wear / Remove)</label>
+      <div id="accessory-selector" class="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto">
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 pt-2 border-t border-black/10">
+      <button type="button" onclick="confirmResetSanctuary()" id="btn-reset-confirm" class="text-xs text-rose-500 hover:underline font-medium">
+        Reset Progress
+      </button>
+      <button type="button" onclick="saveCustomization()" class="px-6 py-2.5 rounded-2xl bg-[#88A88E] hover:bg-[#77987D] text-white text-sm font-semibold transition-colors">
+        Save Changes
+      </button>
+    </div>
+  </div>
+</div>

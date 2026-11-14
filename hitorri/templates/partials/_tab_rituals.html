@@ -1,0 +1,69 @@
+<div id="view-tasks" class="space-y-5">
+
+  <div id="birthday-tasks-card" class="hidden theme-card rounded-3xl p-5 border-2 border-[#E6B86A] bg-gradient-to-br from-[#FFF9E6] to-[#FFF0F5] dark:from-[#3F352C] dark:to-[#3E2E3B] shadow-md">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <div>
+        <span class="font-pixel text-[10px] uppercase px-2.5 py-0.5 rounded-full bg-[#E6B86A] text-white">🎂 Today's Celebration</span>
+        <h2 class="font-cozy text-lg font-bold mt-1">Birthday Specials for <span id="bday-section-name">You</span>!</h2>
+        <p class="text-xs opacity-80">Celebrate your special day with joyful rituals for massive Bond & Dewdrops!</p>
+      </div>
+    </div>
+    <div id="birthday-tasks-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+    </div>
+  </div>
+
+  <div class="theme-card rounded-3xl p-5 border border-black/5 shadow-sm">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+      <div>
+        <h2 class="font-cozy text-lg font-bold">Balanced Care & Leisure</h2>
+        <p class="text-xs opacity-70">Focusing on one pillar gently dips the other two—keep all three harmonious!</p>
+      </div>
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <button onclick="filterTasks('all')" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#3D3834] text-white" data-filter="all">All</button>
+        <button onclick="filterTasks('body')" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#88A88E]/15 text-[#5D7F64]" data-filter="body">🌿 Body</button>
+        <button onclick="filterTasks('mind')" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#A59AC9]/15 text-[#6F629E]" data-filter="mind">📖 Mind</button>
+        <button onclick="filterTasks('joy')" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#D98A6C]/15 text-[#B5684B]" data-filter="joy">🎬 Joy</button>
+      </div>
+    </div>
+
+    <div id="tasks-container" class="space-y-5">
+    </div>
+  </div>
+
+  <div class="theme-card rounded-3xl p-5 border border-black/5 shadow-sm">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <h3 class="font-cozy font-semibold text-base flex items-center gap-2">
+        <i class="fa-solid fa-plus-circle text-[#88A88E]"></i>
+        Add Personal Leisure Goal
+      </h3>
+
+      <div class="flex items-center gap-2">
+        <span id="goal-limit-badge" class="text-xs font-semibold px-3 py-1 rounded-full bg-black/5">
+          Custom Goals: 0 / 5 Free
+        </span>
+        <button id="btn-open-premium" onclick="openPremiumModal()" class="text-xs font-bold px-3 py-1 rounded-full bg-gradient-to-r from-[#E6B86A] to-[#D98A6C] text-white shadow-sm hover:opacity-95 transition-opacity">
+          <i class="fa-solid fa-crown mr-1"></i>Upgrade
+        </button>
+      </div>
+    </div>
+
+    <form id="custom-task-form" onsubmit="addCustomTask(event)" class="flex flex-col sm:flex-row gap-2.5">
+      <input
+        type="text"
+        id="custom-task-title"
+        placeholder="e.g., Read 10 pages, Yoga stretch, Watch a Studio Ghibli film..."
+        maxlength="60"
+        required
+        class="flex-1 px-4 py-2.5 rounded-2xl bg-black/5 border border-transparent focus:border-[#88A88E] focus:outline-none text-sm"
+      />
+      <select id="custom-task-category" class="px-3.5 py-2.5 rounded-2xl bg-black/5 border border-transparent focus:border-[#88A88E] focus:outline-none text-sm font-medium">
+        <option value="body">🌿 Body</option>
+        <option value="mind">📖 Mind</option>
+        <option value="joy">🎬 Joy</option>
+      </select>
+      <button type="submit" class="px-5 py-2.5 rounded-2xl bg-[#88A88E] hover:bg-[#77987D] text-white text-sm font-semibold transition-colors shrink-0">
+        Add Goal
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<header class="w-full max-w-6xl mx-auto px-4 pt-4 pb-2 flex flex-wrap items-center justify-between gap-3">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 rounded-2xl bg-[#88A88E] text-white flex items-center justify-center shadow-sm text-lg">
+      <i class="fa-solid fa-seedling"></i>
+    </div>
+    <div>
+      <h1 class="font-cozy text-xl sm:text-2xl font-bold tracking-tight flex items-center gap-2 flex-wrap">
+        {{ brand.name }}
+        <span id="premium-header-badge" class="hidden font-pixel text-[10px] uppercase px-2 py-0.5 rounded-full bg-gradient-to-r from-[#E6B86A] to-[#D98A6C] text-white shadow-sm">
+          {{ brand.premium|upper }} ✨
+        </span>
+        <span id="real-date-pill" class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-black/5 opacity-80">
+        </span>
+      </h1>
+      <p class="text-xs opacity-75">
+        Welcome back, <span id="header-user-name" class="font-semibold">Friend</span> • Balance Body, Mind & Joy
+      </p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-2 flex-wrap">
+    <div class="px-3 py-1.5 rounded-2xl theme-card border border-sky-400/30 shadow-sm flex items-center gap-1.5" title="Dewdrops earned from completing demanding creative & skill quests">
+      <span class="text-sm">💧</span>
+      <span id="currency-balance" class="font-pixel text-xs font-bold text-sky-600 dark:text-sky-300">80</span>
+      <span class="text-[10px] font-semibold opacity-65 hidden sm:inline">Dewdrops</span>
+    </div>
+
+    <button onclick="openProfileModal()" class="px-3 py-2 rounded-2xl theme-card border border-black/5 shadow-sm hover:scale-105 transition-transform text-xs font-semibold flex items-center gap-1.5" title="Edit your preferred name, birthday, or preview holidays">
+      <i class="fa-solid fa-cake-candles text-[#D98A6C]"></i>
+      <span id="header-bday-label" class="hidden md:inline">Birthday</span>
+    </button>
+
+    <div class="flex items-center p-1 rounded-2xl theme-card border border-black/5 shadow-sm" role="group" aria-label="Ambient Lighting">
+      <button onclick="setTheme('morning')" id="btn-theme-morning" class="px-2.5 py-1.5 rounded-xl text-xs font-medium flex items-center gap-1 transition-all" title="Sunny Morning">
+        <i class="fa-solid fa-sun text-amber-500"></i>
+        <span class="hidden lg:inline">Morning</span>
+      </button>
+      <button onclick="setTheme('rainy')" id="btn-theme-rainy" class="px-2.5 py-1.5 rounded-xl text-xs font-medium flex items-center gap-1 transition-all" title="Rainy Sanctuary">
+        <i class="fa-solid fa-cloud-rain text-sky-500"></i>
+        <span class="hidden lg:inline">Rainy</span>
+      </button>
+      <button onclick="setTheme('evening')" id="btn-theme-evening" class="px-2.5 py-1.5 rounded-xl text-xs font-medium flex items-center gap-1 transition-all" title="Cozy Evening">
+        <i class="fa-solid fa-moon text-indigo-400"></i>
+        <span class="hidden lg:inline">Evening</span>
+      </button>
+    </div>
+
+    <button id="btn-sound" onclick="toggleSound()" class="p-2.5 rounded-2xl theme-card border border-black/5 shadow-sm hover:scale-105 transition-transform text-sm" title="Toggle Gentle Chimes">
+      <i id="icon-sound" class="fa-solid fa-volume-high text-[#88A88E]"></i>
+    </button>
+
+    <button onclick="openCustomizeModal()" class="px-3 py-2 rounded-2xl theme-card border border-black/5 shadow-sm hover:scale-105 transition-transform text-xs font-semibold flex items-center gap-1.5">
+      <i class="fa-solid fa-wand-magic-sparkles text-[#D98A6C]"></i>
+      <span class="hidden sm:inline">Customize</span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,166 @@
+<div class="theme-shell w-full max-w-md rounded-[3rem] p-5 sm:p-6 border-4 relative">
+
+  <div class="flex items-center justify-between px-3 mb-3">
+    <div class="flex items-center gap-2">
+      <span id="status-led" class="w-2.5 h-2.5 rounded-full bg-[#88A88E] animate-pulse"></span>
+      <span class="font-pixel text-[10px] tracking-widest opacity-60">SOUL-LINK v4.0</span>
+    </div>
+    <div id="celebration-pill" class="hidden font-pixel text-[10px] px-2.5 py-0.5 rounded-full bg-[#E6B86A]/25 text-amber-800 dark:text-amber-200 font-bold">
+      ✨ Holiday Magic
+    </div>
+  </div>
+
+  <div id="lcd-screen" class="theme-screen rounded-[2rem] border-4 p-4 relative overflow-hidden scanlines">
+    <div id="weather-overlay" class="hidden absolute inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+    <div class="flex items-center justify-between gap-2 relative z-10 mb-2">
+      <div>
+        <div class="flex items-center gap-1.5">
+          <h2 id="pet-display-name" class="font-cozy text-lg font-bold leading-none">Mochi</h2>
+          <button onclick="openCustomizeModal()" class="text-[11px] opacity-60 hover:opacity-100 transition-opacity" title="Rename or change companion">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+        </div>
+        <p id="pet-species-label" class="text-[11px] opacity-75 mt-0.5">Sprout Spirit</p>
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <span id="pet-mood-badge" class="px-2.5 py-1 rounded-full text-xs font-semibold bg-white/75 dark:bg-black/30 backdrop-blur-sm shadow-sm flex items-center gap-1 text-[#3D3834] dark:text-[#F3EFEA]">
+          <span>🌿</span> <span>Serene</span>
+        </span>
+        <span class="font-pixel text-xs px-2.5 py-1 rounded-full bg-[#D98A6C] text-white shadow-sm">
+          LV.<span id="pet-level">1</span>
+        </span>
+      </div>
+    </div>
+
+    <div id="celebration-banner" class="hidden relative z-10 mb-1.5 px-3 py-1.5 rounded-xl bg-white/85 dark:bg-black/45 backdrop-blur-sm border border-amber-400/40 text-center shadow-sm">
+      <p id="celebration-banner-text" class="font-cozy text-xs font-bold text-[#B5684B] dark:text-amber-200"></p>
+    </div>
+
+    <div id="pet-stage" onclick="patPet(event)" class="relative h-56 sm:h-64 w-full flex flex-col items-center justify-end pb-4 cursor-pointer select-none group">
+      <div id="particles-layer" class="absolute inset-0 pointer-events-none z-20"></div>
+
+      <div id="holiday-decor-layer" class="absolute inset-0 pointer-events-none z-0"></div>
+
+      <div class="absolute bottom-2 w-4/5 h-10 rounded-[100%] bg-[#88A88E]/25 border border-[#88A88E]/30 transition-all"></div>
+      <div class="absolute bottom-3.5 w-3/5 h-6 rounded-[100%] bg-[#D98A6C]/25"></div>
+
+      <div id="decor-plant" class="hidden absolute bottom-6 left-3 transition-all duration-500 z-10" title="Cozy Monstera Plant">
+        <svg width="44" height="56" viewBox="0 0 46 58" fill="none">
+          <path d="M13 38H33L30 54H16L13 38Z" fill="#D98A6C"/>
+          <rect x="11" y="35" width="24" height="5" rx="2.5" fill="#C47456"/>
+          <path d="M23 35C23 25 12 22 10 14C18 14 23 21 23 28" fill="#779B7E"/>
+          <path d="M23 35C23 23 34 20 36 11C28 12 23 19 23 27" fill="#88A88E"/>
+          <path d="M23 32C23 20 20 10 23 4C27 10 25 20 23 32Z" fill="#9BB8A0"/>
+        </svg>
+      </div>
+
+      <div id="decor-mushroom" class="hidden absolute bottom-6 left-12 transition-all duration-500 z-10" title="Warm Mushroom Lamp">
+        <svg width="36" height="44" viewBox="0 0 36 44" fill="none">
+          <rect x="14" y="24" width="8" height="16" rx="3" fill="#FAF3EB"/>
+          <path d="M4 25 C4 11 32 11 32 25 Z" fill="#E07A5F"/>
+          <circle cx="12" cy="18" r="2.5" fill="#FAF3EB"/>
+          <circle cx="23" cy="17" r="2" fill="#FAF3EB"/>
+          <circle cx="18" cy="13" r="1.8" fill="#FAF3EB"/>
+        </svg>
+      </div>
+
+      <div id="decor-vinyl" class="hidden absolute bottom-6 right-3 transition-all duration-500 z-10" title="Cozy Vinyl Record Player">
+        <svg width="48" height="42" viewBox="0 0 48 42" fill="none">
+          <rect x="4" y="16" width="40" height="22" rx="4" fill="#B5835A" stroke="#7A5233" stroke-width="2"/>
+          <ellipse cx="21" cy="16" rx="13" ry="4" fill="#2D2A32"/>
+          <ellipse cx="21" cy="16" rx="4" ry="1.5" fill="#E6B86A"/>
+          <path d="M36 12 L29 16" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div id="decor-lamp" class="hidden absolute top-1 right-4 animate-twinkle z-10" title="Warm Star Lamp">
+        <svg width="36" height="50" viewBox="0 0 38 54" fill="none">
+          <line x1="19" y1="0" x2="19" y2="16" stroke="#A59AC9" stroke-width="2"/>
+          <polygon points="19,12 23,22 34,22 25,29 28,39 19,33 10,39 13,29 4,22 15,22" fill="#F2C97D" stroke="#D9A74A" stroke-width="1.5"/>
+          <circle cx="19" cy="26" r="14" fill="#F2C97D" fill-opacity="0.24"/>
+        </svg>
+      </div>
+
+      <div id="pet-avatar-wrapper" class="relative z-10 animate-breathe transition-transform duration-300 group-hover:scale-105">
+      </div>
+
+      <span class="text-[10px] opacity-60 mt-1 font-medium tracking-wide">Tap companion for gentle head pats</span>
+    </div>
+
+    <div class="mt-2 bg-white/90 dark:bg-black/45 backdrop-blur-sm rounded-2xl p-3 border border-black/5 shadow-sm relative z-10 text-[#3D3834] dark:text-[#F3EFEA]">
+      <div class="flex items-start gap-2.5">
+        <div class="w-6 h-6 rounded-full bg-[#A59AC9]/25 text-[#7E70AD] dark:text-[#C8BEE8] flex items-center justify-center shrink-0 mt-0.5 text-xs">
+          <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <p id="pet-dialogue" class="text-xs sm:text-sm leading-relaxed font-medium">
+          "Take a deep breath. Balancing your Body, Mind, and Joy helps us both bloom!"
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="imbalance-banner" class="hidden mt-3 px-3.5 py-2.5 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center gap-2.5 text-xs">
+    <span class="text-base shrink-0">⚖️</span>
+    <p id="imbalance-text" class="font-medium leading-snug"></p>
+  </div>
+
+  <div class="mt-4 space-y-3 px-1">
+    <div>
+      <div class="flex justify-between text-xs font-semibold mb-1">
+        <span class="flex items-center gap-1.5 text-[#D98A6C]">
+          <i class="fa-solid fa-heart"></i> Companion Bond
+        </span>
+        <span class="opacity-75 font-pixel text-[11px]"><span id="xp-current">20</span> / <span id="xp-next">100</span> XP</span>
+      </div>
+      <div class="w-full h-2.5 rounded-full bg-black/10 overflow-hidden">
+        <div id="bar-xp" class="h-full rounded-full bg-gradient-to-r from-[#D98A6C] to-[#E6B86A] transition-all duration-500" style="width: 20%"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2.5 pt-1">
+      <div id="card-stat-body" class="p-2.5 rounded-2xl theme-card border border-black/5 transition-all">
+        <div class="flex items-center justify-between text-xs font-semibold mb-1">
+          <span class="text-[#779B7E] flex items-center gap-1"><i class="fa-solid fa-leaf"></i> Body</span>
+          <span id="val-vitality" class="font-pixel text-[10px]">65%</span>
+        </div>
+        <div class="w-full h-2 rounded-full bg-black/10 overflow-hidden">
+          <div id="bar-vitality" class="h-full rounded-full bg-[#88A88E] transition-all duration-500" style="width: 65%"></div>
+        </div>
+      </div>
+
+      <div id="card-stat-mind" class="p-2.5 rounded-2xl theme-card border border-black/5 transition-all">
+        <div class="flex items-center justify-between text-xs font-semibold mb-1">
+          <span class="text-[#8679B5] flex items-center gap-1"><i class="fa-solid fa-book-open"></i> Mind</span>
+          <span id="val-mind" class="font-pixel text-[10px]">65%</span>
+        </div>
+        <div class="w-full h-2 rounded-full bg-black/10 overflow-hidden">
+          <div id="bar-mind" class="h-full rounded-full bg-[#A59AC9] transition-all duration-500" style="width: 65%"></div>
+        </div>
+      </div>
+
+      <div id="card-stat-joy" class="p-2.5 rounded-2xl theme-card border border-black/5 transition-all">
+        <div class="flex items-center justify-between text-xs font-semibold mb-1">
+          <span class="text-[#D98A6C] flex items-center gap-1"><i class="fa-solid fa-film"></i> Joy</span>
+          <span id="val-joy" class="font-pixel text-[10px]">65%</span>
+        </div>
+        <div class="w-full h-2 rounded-full bg-black/10 overflow-hidden">
+          <div id="bar-joy" class="h-full rounded-full bg-[#D98A6C] transition-all duration-500" style="width: 65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5 flex items-center justify-center gap-3">
+    <button onclick="patPet()" class="handheld-btn px-4 py-2.5 rounded-full bg-[#D98A6C] text-white text-xs font-bold flex items-center gap-1.5">
+      <i class="fa-solid fa-hand-holding-heart"></i> Comfort
+    </button>
+    <button onclick="triggerBreathingPause()" class="handheld-btn px-4 py-2.5 rounded-full bg-[#88A88E] text-white text-xs font-bold flex items-center gap-1.5">
+      <i class="fa-solid fa-wind"></i> Breathe
+    </button>
+    <button onclick="switchTab('quests')" class="handheld-btn px-4 py-2.5 rounded-full bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5">
+      <span>💧</span> Quests
+    </button>
+  </div>
+</div>

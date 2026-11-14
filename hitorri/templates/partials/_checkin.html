@@ -1,0 +1,32 @@
+<div class="theme-card w-full max-w-md mt-5 rounded-3xl p-5 border border-black/5 shadow-sm">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="font-cozy font-semibold text-base flex items-center gap-2">
+      <i class="fa-solid fa-heart-pulse text-[#D98A6C]"></i>
+      Gentle Check-In
+    </h3>
+    <span class="text-[11px] opacity-60">How is your heart right now?</span>
+  </div>
+
+  <div class="grid grid-cols-5 gap-2">
+    <button onclick="logMood('peaceful')" class="mood-choice flex flex-col items-center p-2 rounded-2xl border border-black/5 hover:bg-[#88A88E]/15 transition-all" data-mood="peaceful">
+      <span class="text-xl mb-1">🌿</span>
+      <span class="text-[11px] font-medium">Calm</span>
+    </button>
+    <button onclick="logMood('happy')" class="mood-choice flex flex-col items-center p-2 rounded-2xl border border-black/5 hover:bg-[#E6B86A]/20 transition-all" data-mood="happy">
+      <span class="text-xl mb-1">☀️</span>
+      <span class="text-[11px] font-medium">Bright</span>
+    </button>
+    <button onclick="logMood('tired')" class="mood-choice flex flex-col items-center p-2 rounded-2xl border border-black/5 hover:bg-[#A59AC9]/15 transition-all" data-mood="tired">
+      <span class="text-xl mb-1">🥱</span>
+      <span class="text-[11px] font-medium">Tired</span>
+    </button>
+    <button onclick="logMood('overwhelmed')" class="mood-choice flex flex-col items-center p-2 rounded-2xl border border-black/5 hover:bg-sky-500/15 transition-all" data-mood="overwhelmed">
+      <span class="text-xl mb-1">🌧️</span>
+      <span class="text-[11px] font-medium">Heavy</span>
+    </button>
+    <button onclick="logMood('cozy')" class="mood-choice flex flex-col items-center p-2 rounded-2xl border border-black/5 hover:bg-[#D98A6C]/15 transition-all" data-mood="cozy">
+      <span class="text-xl mb-1">🍵</span>
+      <span class="text-[11px] font-medium">Cozy</span>
+    </button>
+  </div>
+</div>

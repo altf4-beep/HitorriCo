@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block body %}
+  {% include "partials/_toasts.html" %}
+  {% include "partials/_header.html" %}
+
+  <main class="w-full max-w-6xl mx-auto px-4 py-4 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <section class="lg:col-span-5 flex flex-col items-center">
+      {% include "partials/_pet_device.html" %}
+      {% include "partials/_checkin.html" %}
+    </section>
+
+    <section class="lg:col-span-7 flex flex-col gap-5">
+      {% include "partials/_tab_nav.html" %}
+      {% include "partials/_tab_rituals.html" %}
+      {% include "partials/_tab_quests.html" %}
+      {% include "partials/_tab_boutique.html" %}
+    </section>
+  </main>
+
+  {% include "partials/_modal_profile.html" %}
+  {% include "partials/_modal_premium.html" %}
+  {% include "partials/_modal_breathing.html" %}
+  {% include "partials/_modal_customize.html" %}
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    window.HITORRI_CONFIG = {{ client_config|tojson }};
+    window.HITORRI_CATALOG = {{ catalog|tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='js/sound.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/catalog.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/state.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dates.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/pet-renderer.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/interactions.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/goals.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/tasks.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/quests.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/boutique.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

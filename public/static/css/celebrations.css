@@ -1,0 +1,35 @@
+.screen-holiday-newyear {
+  background: radial-gradient(circle at 50% 25%, #2D264B 0%, #19152E 100%) !important;
+  border-color: #E6B86A !important;
+  color: #FAF7F2 !important;
+}
+.screen-holiday-valentine {
+  background: linear-gradient(180deg, #FFE8F0 0%, #FFD6E5 100%) !important;
+  border-color: #F28FB0 !important;
+  color: #4A2535 !important;
+}
+.screen-holiday-july4 {
+  background: linear-gradient(180deg, #1E325C 0%, #2C487A 60%, #F4EFE6 100%) !important;
+  border-color: #D9534F !important;
+  color: #FFFFFF !important;
+}
+.screen-holiday-halloween {
+  background: radial-gradient(circle at 50% 30%, #3E284F 0%, #23172E 100%) !important;
+  border-color: #E8833A !important;
+  color: #FCEEE3 !important;
+}
+.screen-holiday-thanksgiving {
+  background: linear-gradient(180deg, #FBF0DF 0%, #F2D8B3 100%) !important;
+  border-color: #D98A4E !important;
+  color: #4A321F !important;
+}
+.screen-holiday-christmas {
+  background: linear-gradient(180deg, #1D3B34 0%, #2A5248 65%, #EBF5F0 100%) !important;
+  border-color: #C94A4A !important;
+  color: #FAF7F2 !important;
+}
+.screen-holiday-birthday {
+  background: radial-gradient(circle at 50% 20%, #FFF6DB 0%, #FFE4EC 55%, #E8E4FF 100%) !important;
+  border-color: #E6B86A !important;
+  color: #3D3834 !important;
+}

@@ -1,0 +1,51 @@
+:root {
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F2ECE1;
+  --card-bg: #FFFFFF;
+  --text-main: #3D3834;
+  --text-muted: #7A726B;
+  --accent-sage: #88A88E;
+  --accent-lavender: #A59AC9;
+  --accent-terracotta: #D98A6C;
+  --accent-gold: #E6B86A;
+  --shell-bg: #F4EFE6;
+  --shell-border: #DFD5C5;
+  --screen-bg: #EEF4EC;
+  --screen-border: #C4D1C1;
+}
+
+body.theme-morning {
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F2ECE1;
+  --card-bg: #FFFFFF;
+  --text-main: #3D3834;
+  --text-muted: #7A726B;
+  --shell-bg: #F5EFE6;
+  --shell-border: #E0D5C5;
+  --screen-bg: #EFF5EC;
+  --screen-border: #C2D2BE;
+}
+
+body.theme-evening {
+  --bg-primary: #25222B;
+  --bg-secondary: #2F2B37;
+  --card-bg: #363140;
+  --text-main: #F3EFEA;
+  --text-muted: #B8B0C2;
+  --shell-bg: #3F394B;
+  --shell-border: #554D66;
+  --screen-bg: #2B2838;
+  --screen-border: #4D4663;
+}
+
+body.theme-rainy {
+  --bg-primary: #E7ECEF;
+  --bg-secondary: #DAE2E7;
+  --card-bg: #F7FAFC;
+  --text-main: #2E3A42;
+  --text-muted: #657580;
+  --shell-bg: #E2E9ED;
+  --shell-border: #C3D0D8;
+  --screen-bg: #E6EFF2;
+  --screen-border: #B5C8D1;
+}

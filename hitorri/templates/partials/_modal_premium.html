@@ -1,0 +1,56 @@
+<div id="premium-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="theme-card w-full max-w-md rounded-[2.5rem] p-6 shadow-2xl border border-[#E6B86A]/40 relative overflow-hidden">
+    <button onclick="closePremiumModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-sm">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="text-center mb-5">
+      <div class="w-14 h-14 rounded-3xl bg-gradient-to-br from-[#E6B86A] to-[#D98A6C] text-white text-2xl flex items-center justify-center mx-auto mb-3 shadow-md">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+      <span class="font-pixel text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#E6B86A]/20 text-[#B58938]">
+        Free Limit Reached (5 / 5 Goals)
+      </span>
+      <h3 class="font-cozy text-2xl font-bold mt-2">Upgrade to {{ brand.premium }}</h3>
+      <p class="text-xs opacity-75 mt-1 max-w-xs mx-auto">
+        Unlock unlimited custom leisure goals, bonus Dewdrops on quests, and support cozy mental well-being tools.
+      </p>
+    </div>
+
+    <div class="space-y-2.5 mb-5 text-xs">
+      <div class="p-3 rounded-2xl bg-black/[0.03] flex items-center gap-3">
+        <span class="text-base">♾️</span>
+        <div>
+          <p class="font-bold">Unlimited Custom Leisure Goals</p>
+          <p class="opacity-70">Create as many personal Body, Mind & Joy rituals as you wish.</p>
+        </div>
+      </div>
+      <div class="p-3 rounded-2xl bg-black/[0.03] flex items-center gap-3">
+        <span class="text-base">💧</span>
+        <div>
+          <p class="font-bold">+50 Bonus Dewdrops Welcome Gift</p>
+          <p class="opacity-70">Instantly treat your companion in the Cozy Boutique.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 mb-4">
+      <button type="button" onclick="selectPlan('monthly')" id="plan-monthly" class="plan-card p-3.5 rounded-2xl border-2 border-[#D98A6C] bg-[#D98A6C]/10 text-left transition-all">
+        <span class="text-[10px] font-bold uppercase text-[#D98A6C]">Flexible</span>
+        <p class="font-cozy text-lg font-bold mt-0.5">$2.99 <span class="text-xs font-normal opacity-70">/ mo</span></p>
+        <p class="text-[11px] opacity-70">Cancel anytime</p>
+      </button>
+
+      <button type="button" onclick="selectPlan('lifetime')" id="plan-lifetime" class="plan-card p-3.5 rounded-2xl border-2 border-black/10 bg-black/[0.02] text-left transition-all relative">
+        <span class="absolute -top-2.5 right-3 px-2 py-0.5 rounded-full bg-[#88A88E] text-white text-[9px] font-bold">BEST VALUE</span>
+        <span class="text-[10px] font-bold uppercase text-[#779B7E]">Forever</span>
+        <p class="font-cozy text-lg font-bold mt-0.5">$9.99 <span class="text-xs font-normal opacity-70">once</span></p>
+        <p class="text-[11px] opacity-70">Lifetime sanctuary</p>
+      </button>
+    </div>
+
+    <button onclick="activatePremium()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#E6B86A] to-[#D98A6C] text-white font-bold text-sm shadow-md hover:opacity-95 transition-opacity">
+      Unlock {{ brand.premium }} Now ✨
+    </button>
+  </div>
+</div>
