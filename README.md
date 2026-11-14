@@ -28,12 +28,12 @@ Highlights
 8) Progress saved automatically in your browser
 
 Tech Stack
-Layer	Technology: Backend	Python, Flask
-Templates:	Jinja2 with reusable partials
-Frontend:	Vanilla JavaScript, CSS, Tailwind CSS (CDN)
-Icons and fonts:	Font Awesome, Google Fonts
-Storage	Browser: localStorage
-Hosting:	Vercel
+- Layer	Technology: Backend	Python, Flask
+- Templates:	Jinja2 with reusable partials
+- Frontend:	Vanilla JavaScript, CSS, Tailwind CSS (CDN)
+- Icons and fonts:	Font Awesome, Google Fonts
+- Storage	Browser: localStorage
+- Hosting:	Vercel
 
 Project Structure
 app.py
